@@ -1,17 +1,23 @@
+# src/latest_ai_development/config/tasks.yaml
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Conduct thorough research about {anime_topic}
+    Find interesting and relevant information about recent anime developments, 
+    trends, and innovations given the current year is 2025.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    A list with 10 bullet points highlighting the most significant 
+    developments in {anime_topic} including new shows, technologies, 
+    industry changes, and cultural impact.
+  agent: anime_researcher
 
 reporting_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Review the anime research data and transform each point into a comprehensive 
+    section for an anime industry report. Include analysis on artistic trends, 
+    technological advancements, and market developments.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
+    A complete anime industry report with detailed sections covering each research 
+    point, including relevant examples, statistics, and future projections.
     Formatted as markdown without '```'
-  agent: reporting_analyst
+  agent: anime_analyst
+  output_file: anime_report.md
